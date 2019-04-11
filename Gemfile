@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.7'
 # Use mysql as the database for Active Record
 
 # gem 'mysql2', '>= 0.3.18', '< 0.6.0'
-gem 'mysql2', group: :development
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'mysql2'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
@@ -62,5 +63,8 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem "font-awesome-sass"
 
-gem 'pg', group: :production
+group :production do
+  gem 'pg'
+end
+
 
