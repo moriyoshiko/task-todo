@@ -63,3 +63,4 @@ gem 'jquery-rails'
 gem "font-awesome-sass"
 
 gem 'pg', group: :production
+
